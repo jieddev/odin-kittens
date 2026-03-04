@@ -8,6 +8,8 @@
 
   <%= link_to "Edit Kitten", edit_kitten_path(kitten) %> 
   <%= link_to "Check Kitten", kitten_path(kitten) %>
+  <%= link_to "Delete Kitten", kitten_path(kitten), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"  } %>
+  
   <br>
   <br>
 
