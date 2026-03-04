@@ -1,5 +1,7 @@
 <h1>Kitten Creator</h1>
 
+<%= link_to "Create a Kitten", new_kitten_path%> <br><br>
+
 <% @kittens.each do |kitten| %>
   <%= kitten.name %> <br>
   <%= kitten.age %><br>
