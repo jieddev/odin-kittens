@@ -1,0 +1,10 @@
+<%= form_with model: Kitten, method: :post do |f| %>
+  <%= f.label :name, 'Name: ' %>
+  <%= f.text_field :name %> <br>
+
+  <%= f.label :age, 'Age:' %>
+  <%= f.number_field :age %> <br>
+
+  <%= f.submit "Submit"%>
+
+<%end%>
