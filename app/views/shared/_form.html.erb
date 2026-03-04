@@ -1,4 +1,6 @@
-<%= form_with model: Kitten, method: :post do |f| %>
+<%# <%= form_with model: Kitten, method: :post do |f| %>
+<%= form_with model: @kitten do |f|  %>
+
   <%= f.label :name, 'Name: ' %>
   <%= f.text_field :name %> <br>
 
@@ -10,9 +12,9 @@
   
   <%= f.label :softness, 'Softness: ' %>
   <%= f.text_field :softness %> <br>
-
   
   <%= f.submit "Submit"%>
+
 
 <%end%>
 

@@ -5,18 +5,25 @@ class KittensController < ApplicationController
   end
 
   def show 
-    @kitten = Kitten.first 
+    # @kitten = Kitten.first 
+    @kitten = Kitten.find(params[:id])
   end
 
   def new 
-  
+    @kitten = Kitten.new
   end
 
   def edit 
-  
+    @kitten = Kitten.find(params[:id])
   end
 
   def update
+    @kitten = Kitten.find(params[:id])
+    if @kitten.update(kitten_params)
+      redirect_to @kitten, notice: "Kitten updated successfully."
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def create 
